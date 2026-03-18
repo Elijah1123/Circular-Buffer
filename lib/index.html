@@ -8,16 +8,17 @@
 </head>
 <body>
 
-    <h3>Circular Buffer (Limit: 3)</h3>
-    <p>New items will overwrite the oldest slot.</p>
-    <input type="text" id="bufferInput" placeholder="Item...">
-    <button onclick="addToBuffer()">Add</button>
-    
-    <div class="buffer-container" id="bufferDisplay">
-        <div class="slot" id="s0">-</div>
-        <div class="slot" id="s1">-</div>
-        <div class="slot" id="s2">-</div>
+    <h2>Circular Buffer Visualizer</h2>
+    <div id="status-msg">Buffer Empty</div>
+
+    <div class="controls">
+        <input type="text" id="dataInput" placeholder="Data..." style="padding: 10px;">
+        <button class="btn-add" onclick="enqueue()">Write (Overwrite)</button>
+        <button class="btn-read" onclick="dequeue()">Read (Remove)</button>
     </div>
+
+    <div class="buffer-ring" id="ring">
+        </div>
 
     
 <script src="index.js"></script>    
